@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Code Snippet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css"
+    />
+    <!-- CodeMirror Theme (e.g., Dracula) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/dracula.min.css"
+    />
+    <!-- CodeMirror JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <!-- CodeMirror Mode (e.g., XML) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/xml/xml.min.js"></script>
+
+    <link rel="stylesheet" href="/scss/index.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Left side area Wrapper -->
+      <div class="left_Panel_Wrapper">
+        <!-- Left Panel Header -->
+        <div class="left_Pannel_header">
+          <img src="/Images/code.png" alt="" />
+          <!-- <h2>Snippify</h2> -->
+        </div>
+        <!-- Left Panel Titles Container -->
+        <div id="titlesContainer" class="left_Panel_Titles_Container">
+          <!-- Underline -->
+          <!-- <div class="underline"></div> -->
+        </div>
+      </div>
+      <!-- Right side Area WRapper -->
+      <div class="right_Area_Wrapper">
+        <!-- RIGHT SIDE TOP NAV Container -->
+        <div class="right_Top_Nav_Container"></div>
+        <!-- Header Helper Text Container -->
+        <div class="header_Helper_Text">
+          <h3>Create a new code snippet</h3>
+          <div id="tooltip" class="tooltip">
+            <img src="/Images/i.png" alt="info" />
+            <span class="tooltiptext"
+              >*Snippets are sorted by the no of times they are copied.</span
+            >
+          </div>
+        </div>
+        <!-- Right Side Header Container -->
+        <div class="right_Side_Header_Container">
+          <!-- Right Header Inner Search Container -->
+          <div class="right_Header_Left_Container">
+            <div class="search_Container">
+              <input class="search" placeholder="Search" type="search" />
+            </div>
+          </div>
+          <!-- Right Header Add Button Container -->
+          <div class="right_Side_AddButton_Container">
+            <!-- Add Button Wrapper -->
+            <div id="addNewCode" class="add_Button_Wrapper">
+              <p>New Snippet</p>
+              <img src="/Images/add.png" alt="add+" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Snippets Wrapper -->
+        <label class="label-snippet-container" for="snippet-wrapper"
+          >Your Snippets</label
+        >
+        <div id="snippet-wrapper" class="right_Side_Snippets_Wrapper">
+          <p class="container_PlaceHolder">You have zero code snippets</p>
+          <!-- A Code Snippet Container -->
+
+          <!-- <div class="code_Snippet_Container">
+            <div class="title_Wrapper">
+              <h5 id="titleArea"></h5>
+              <div class="button_Area">
+                <img src="copy.png" alt="" />
+                <img src="edit.png" alt="" />
+                <img src="delete.png" alt="" />
+              </div>
+            </div>
+            <div class="code_Wrapper">
+              <div class="code_Area">
+                <pre id="codeArea">
+                  first
+                </pre>
+              </div>
+            </div>
+            <div class="helper_Wrapper">
+              <p>Copied: 63 times</p>
+              <p>Created: 27-02-2024</p>
+              <p>Lines of Code: 44</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Pop Up Container -->
+    <div id="popup" class="popup_Container">
+      <!-- Popup Header -->
+      <div class="popup_Header">
+        <!-- Title Container -->
+        <div class="popup_Title_Container">
+          <input
+            id="pasteTitleArea"
+            placeholder="Enter title"
+            type="text"
+            name=""
+            id=""
+          />
+        </div>
+        <!-- Button Container -->
+        <div class="popup_Button_Container">
+          <button id="savePopup" class="save" type="button">Save</button>
+          <button class="cancel" id="closePopUp" type="button">Cancel</button>
+        </div>
+      </div>
+      <textarea class="codeArea" name="" id="pasteCodeArea"></textarea>
+      <!-- Code Area Container -->
+      <!-- <div class="code_Area_Container">
+      
+      </div> -->
+    </div>
+    <!-- Overlay Container -->
+    <div id="overlay" class="overlay"></div>
+    <div id="status" class="status"><p>Deleted</p></div>
+    <script src="/js/dashboard/index.js"></script>
+  </body>
+</html>
